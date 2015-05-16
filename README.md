@@ -1,4 +1,5 @@
-# tldrlegal
+# tldrlegal [![Build Status](https://travis-ci.org/CesarValiente/tldrlegal.svg?branch=master)](https://travis-ci.org/CesarValiente/tldrlegal)
+
 TLDRLegal Android app which uses the great info you can find on the website https://tldrlegal.com
 
 This app has been developed to learn and to share knowledge.
