@@ -1,0 +1,7 @@
+include ':mobile'
+include ':tv'
+include ':wear'
+include ':domain'
+include ':api'
+include ':ddbb'
+include ':data'
