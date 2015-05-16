@@ -5,7 +5,6 @@ import java.net.URI;
 import java.util.Collections;
 import java.util.List;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -99,8 +98,10 @@ public class VideoDetailsFragment extends DetailsFragment {
             try {
                 Bitmap poster = Picasso.with(getActivity())
                                        .load(mSelectedMovie.getCardImageUrl())
-                                       .resize(Utils.convertDpToPixel(getActivity().getApplicationContext(), DETAIL_THUMB_WIDTH),
-                                               Utils.convertDpToPixel(getActivity().getApplicationContext(), DETAIL_THUMB_HEIGHT))
+                                       .resize(Utils.convertDpToPixel(getActivity().getApplicationContext(),
+                                                       DETAIL_THUMB_WIDTH),
+                                               Utils.convertDpToPixel(getActivity().getApplicationContext(),
+                                                       DETAIL_THUMB_HEIGHT))
                                        .centerCrop()
                                        .get();
                 row.setImageBitmap(getActivity(), poster);
@@ -153,7 +154,7 @@ public class VideoDetailsFragment extends DetailsFragment {
                 listRowAdapter.add(list.get(j % 5));
             }
 
-            HeaderItem header = new HeaderItem(0, subcategories[0], null);
+            HeaderItem header = new HeaderItem(0, subcategories[0]);
             adapter.add(new ListRow(header, listRowAdapter));
 
             setAdapter(adapter);

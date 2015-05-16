@@ -13,6 +13,11 @@
  */
 package com.cesarvaliente.tldrlegal;
 
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -52,11 +57,6 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
-
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 /*
  * Class for video playback with media control
@@ -313,7 +313,7 @@ public class PlaybackOverlayFragment extends android.support.v17.leanback.app.Pl
         for (Movie movie : mItems) {
             listRowAdapter.add(movie);
         }
-        HeaderItem header = new HeaderItem(0, getString(R.string.related_movies), null);
+        HeaderItem header = new HeaderItem(0, getString(R.string.related_movies));
         mRowsAdapter.add(new ListRow(header, listRowAdapter));
 
     }
