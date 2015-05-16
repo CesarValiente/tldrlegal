@@ -1,13 +1,10 @@
 language: android
 
 android:
-  components:
-  	# Basic stuff
+  components:  	
     - build-tools-22.0.1
     - android-22
     - extra-android-support
-
- 	# Additional components
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
