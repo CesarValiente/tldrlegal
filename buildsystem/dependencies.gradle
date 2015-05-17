@@ -9,10 +9,11 @@ allprojects {
 ext {
 
   //Android
+  androidCompileSdkVersion = 22
   androidBuildToolsVersion = "22.0.1"
   androidMinSdkVersion = 16
   androidTargetSdkVersion = 22
-  androidCompileSdkVersion = 22
+  
 
   //Libraries
   daggerVersion = '2.0'
@@ -24,8 +25,10 @@ ext {
   okHttpVersion = '2.3.0'
   retrofitVersion = '1.9.0'
   butterKnifeVersion = '6.1.0'  
-  recyclerViewVersion = '21.0.3'
   realmVersion = '0.80.1'
+  recyclerViewVersion = '21.0.3'
+  appCompatVersion = '22.1.1'
+  playServicesVersion = '7.0.0'
 
   //Testing
   robolectricVersion = '2.4'
@@ -39,11 +42,13 @@ ext {
   mobileDependencies = [
       daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
       dagger:             "com.google.dagger:dagger:${daggerVersion}",
-      butterKnife:        "com.jakewharton:butterknife:${butterKnifeVersion}",
-      recyclerView:       "com.android.support:recyclerview-v7:${recyclerViewVersion}",
+      butterKnife:        "com.jakewharton:butterknife:${butterKnifeVersion}",      
       rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
       rxAndroid:          "io.reactivex:rxandroid:${rxAndroidVersion}",
-      javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}"
+      javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+      recyclerView:       "com.android.support:recyclerview-v7:${recyclerViewVersion}",
+      appCompat:          "com.android.support:appcompat-v7:${appCompatVersion}",
+      playServices:       "com.google.android.gms:play-services:${playServicesVersion}"
   ]
 
   mobileTestDependencies = [
@@ -68,12 +73,15 @@ ext {
 
   dataDependencies = [
       daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
-      dagger:             "com.google.dagger:dagger:${daggerVersion}",      
-      gson:               "com.google.code.gson:gson:${gsonVersion}",
+      dagger:             "com.google.dagger:dagger:${daggerVersion}",            
       rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
       rxAndroid:          "io.reactivex:rxandroid:${rxAndroidVersion}",
       javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
-      androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}"
+      androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+      gson:               "com.google.code.gson:gson:${gsonVersion}",
+      okHttp:             "com.squareup.okhttp:okhttp:${okHttpVersion}",
+      retrofit:           "com.squareup.retrofit:retrofit:${retrofitVersion}",
+      realm:              "io.realm:realm-android:${realmVersion}"
   ]
 
 //  dataTestDependencies = [
@@ -81,27 +89,5 @@ ext {
 //      mockito:            "org.mockito:mockito-core:${mockitoVersion}",
 //      robolectric:        "org.robolectric:robolectric:${robolectricVersion}"
 //  ]
-
-  apiDependencies = [
-      daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
-      dagger:             "com.google.dagger:dagger:${daggerVersion}",
-      okHttp:             "com.squareup.okhttp:okhttp:${okHttpVersion}",
-      gson:               "com.google.code.gson:gson:${gsonVersion}",
-      rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
-      rxAndroid:          "io.reactivex:rxandroid:${rxAndroidVersion}",
-      javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
-      androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
-      retrofit:           "com.squareup.retrofit:retrofit:${retrofitVersion}"
-  ]
-
-  databaseDependencies = [
-      daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
-      dagger:             "com.google.dagger:dagger:${daggerVersion}",            
-      rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
-      rxAndroid:          "io.reactivex:rxandroid:${rxAndroidVersion}",
-      javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
-      androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
-      realm:              "io.realm:realm-android:${realmVersion}"
-    ]
 
 }
