@@ -1,6 +1,8 @@
 # tldrlegal [![Build Status](https://travis-ci.org/CesarValiente/tldrlegal.svg?branch=master)](https://travis-ci.org/CesarValiente/tldrlegal)
 
-TLDRLegal Android app which uses the great info you can find on the website https://tldrlegal.com
+TLDRLegal unoficial (community-made) app. 
+Discover what FLOSS licenses are, the rights these licenses give to you and to the community, how you can use them and many more. 
+Using the amazing data that the official website https://tldrlegal.com provides.
 
 This app has been developed to learn and to share knowledge.
 
