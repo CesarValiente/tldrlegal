@@ -1,6 +1,6 @@
 # tldrlegal [![Build Status](https://travis-ci.org/CesarValiente/tldrlegal.svg?branch=master)](https://travis-ci.org/CesarValiente/tldrlegal)
 
-TLDRLegal unoficial (community-made) app. 
+TLDRLegal unofficial (community-made) app. 
 Discover what FLOSS licenses are, the rights these licenses give to you and to the community, how you can use them and many more. 
 Using the amazing data that the official website https://tldrlegal.com provides.
 
